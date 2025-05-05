@@ -4,12 +4,17 @@ let obj={
     "Charlie": 78,
     "Diana": 29
   };
-  let nobj={};
-  for(let key in obj){
-    if(obj[key]>=40){
-        nobj[key]="Pass";
-    }else{
-        nobj[key]="Fail";
+ 
+  function checker(obj){
+    let nobj={};
+    for(let key in obj){
+      if(obj[key]>=40){
+          nobj[key]="Pass";
+      }else{
+          nobj[key]="Fail";
+      }
     }
+    return nobj;
   }
-  console.log(nobj);
+let res = checker(obj);
+console.log(res);
